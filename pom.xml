@@ -1,7 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+  
+  <!-- The Basics -->
   <groupId>jp.coppermine</groupId>
-  <artifactId>javaee-quickstart</artifactId>
+  <artifactId>jakartaee-quickstart</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>war</packaging>
   <properties>
@@ -18,8 +20,10 @@
       <scope>provided</scope>
     </dependency>
   </dependencies>
+  
+  <!-- Build Settings -->
   <build>
-    <finalName>javaee-quickstart</finalName>
+    <finalName>jakartaee-quickstart</finalName>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -31,4 +35,87 @@
       </plugin>
     </plugins>
   </build>
+  
+  <!-- More Project Information -->
+  <name>Jakarta EE Quick Start</name>
+  <description>Jakarta EE quick start template with JSF and JAX-RS</description>
+  <url>https://github.com/khasunuma/jakartaee-quickstart</url>
+  <inceptionYear>2018</inceptionYear>
+  <licenses>
+    <license>
+      <name>BSD 2-Clause "Simplified" License</name>
+      <url>https://github.com/khasunuma/jakartaee-quickstart/blob/master/LICENSE</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <organization>
+    <name>coppermine.jp</name>
+    <url>https://www.coppermine.jp/</url>
+  </organization>
+  <developers>
+    <developer>
+      <id>khasunuma</id>
+      <name>HASUNUMA Kenji</name>
+      <email>khasunuma@coppermine.jp</email>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>9</timezone>
+    </developer>
+  </developers>
+  
+  <!-- Environment Settings -->
+  <issueManagement>
+    <system>GitHub Issues</system>
+    <url>https://github.com/khasunuma/jakartaee-quickstart/issues</url>
+  </issueManagement>
+  <scm>
+    <url>https://github.com/khausnuma/jakartaee-quickstart</url>
+    <connection>scm:git:git://github.com/khausnuma/jakartaee-quickstart.git</connection>
+    <developerConnection>scm:git:git://github.com/khausnuma/jakartaee-quickstart.git</developerConnection>
+  </scm>
+  <!-- Prepare to deploy Maven central repository
+  <distributionManagement>
+    <repository>
+      <id>sonatype-nexus-staging</id>
+      <name>Nexus Release Repository</name>
+      <uniqueVersion>false</uniqueVersion>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+    </repository>
+    <snapshotRepository>
+      <id>sonatype-nexus-snapshot</id>
+      <uniqueVersion>false</uniqueVersion>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+  <profiles>
+    <profile>
+      <id>release-sign-artifacts</id>
+      <activation>
+        <property>
+          <name>performRelease</name>
+          <value>true</value>
+        </property>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>1.6</version>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+  -->
 </project>
